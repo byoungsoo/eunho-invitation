@@ -1,0 +1,377 @@
+@font-face {
+  font-family: 'NEXON Lv1 Gothic';
+  src: url('../fonts/NEXON_Lv1_Gothic_Low_OTF.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic';
+  src: url('../fonts/NEXON_Lv1_Gothic_Low_OTF_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NEXON Lv1 Gothic', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+}
+
+.mobile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+}
+
+.photo-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.baby-age {
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.invitation-card {
+  padding: 30px 20px;
+  background: white;
+}
+
+.card-content {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.invitation-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+.event-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-item .icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  margin-top: 2px;
+}
+
+.detail-text strong {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.detail-text p {
+  margin: 0;
+  color: #666;
+}
+
+.invitation-message {
+  text-align: center;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 20px;
+  border-radius: 15px;
+  line-height: 1.6;
+  border: 1px solid #e9ecef;
+}
+
+.invitation-message p {
+  margin-bottom: 8px;
+}
+
+.invitation-message p:last-child {
+  margin-bottom: 0;
+}
+
+.parents-name {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.event-schedule {
+  padding: 30px 20px;
+  background: white;
+}
+
+.schedule-content {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.schedule-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.schedule-number {
+  width: 30px;
+  height: 30px;
+  background: #495057;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.schedule-text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.schedule-text p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.quiz-notice {
+  color: #2897e1 !important;
+  font-weight: 600;
+  margin-top: 5px !important;
+}
+
+.photo-album {
+  padding: 30px 20px;
+  background: #f8f9fa;
+}
+
+.album-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 25px;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.album-photo {
+  text-align: center;
+}
+
+.album-photo img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.album-photo img:hover {
+  transform: scale(1.05);
+}
+
+.photo-caption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.closing-message {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.closing-message p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.heart-decoration {
+  font-size: 2rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.preparation {
+  padding: 30px 20px;
+  background: white;
+}
+
+.preparation-content {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.preparation-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+.preparation-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.preparation-number {
+  width: 30px;
+  height: 30px;
+  background: #495057;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.preparation-text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.preparation-text p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.location-link {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.detail-text small {
+  color: #999;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 3px;
+}
+
+.copy-btn {
+  cursor: pointer;
+  margin-left: 5px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .mobile-container {
+    max-width: 100%;
+  }
+  
+  .invitation-title {
+    font-size: 1.4rem;
+  }
+  
+  .album-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .album-photo img {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
