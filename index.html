@@ -140,36 +140,65 @@
         <section class="photo-album">
             <h2 class="album-title">🎞️ 은호의 앨범 </h2>
             
-            <div class="album-grid">
-                <div class="album-photo">
-                    <img src="./images/album1.jpg" alt="은호 사진 1">
-                    <p class="photo-caption">신생아 시절</p>
+            <div class="album-sections">
+                <div class="album-section">
+                    <h3 class="section-caption">신생아</h3>
+                    <div class="album-row">
+                        <img src="./images/newborn1.jpg" alt="신생아 1" onclick="openModal('./images/newborn1.jpg')">
+                        <img src="./images/newborn2.jpg" alt="신생아 2" onclick="openModal('./images/newborn2.jpg')">
+                    </div>
                 </div>
                 
-                <div class="album-photo">
-                    <img src="./images/album2.jpg" alt="은호 사진 2">
-                    <p class="photo-caption">100일</p>
+                <div class="album-section">
+                    <h3 class="section-caption">50일</h3>
+                    <div class="album-row">
+                        <img src="./images/50days1.jpg" alt="50일 1" onclick="openModal('./images/50days1.jpg')">
+                        <img src="./images/50days2.jpg" alt="50일 2" onclick="openModal('./images/50days2.jpg')">
+                    </div>
                 </div>
                 
-                <div class="album-photo">
-                    <img src="./images/album3.jpg" alt="은호 사진 3">
-                    <p class="photo-caption">첫 이유식</p>
+                <div class="album-section">
+                    <h3 class="section-caption">100일</h3>
+                    <div class="album-row-three">
+                        <img src="./images/100days1.jpg" alt="100일 1" onclick="openModal('./images/100days1.jpg')">
+                        <img src="./images/100days2.jpg" alt="100일 2" onclick="openModal('./images/100days2.jpg')">
+                        <img src="./images/100days3.jpg" alt="100일 3" onclick="openModal('./images/100days3.jpg')">
+                    </div>
                 </div>
                 
-                <div class="album-photo">
-                    <img src="./images/album4.jpg" alt="은호 사진 4">
-                    <p class="photo-caption">첫 걸음마</p>
+                <div class="album-section">
+                    <h3 class="section-caption">성장기</h3>
+                    <div class="album-row-four">
+                        <img src="./images/growth1.jpg" alt="성장기 1" onclick="openModal('./images/growth1.jpg')">
+                        <img src="./images/growth2.jpg" alt="성장기 2" onclick="openModal('./images/growth2.jpg')">
+                        <img src="./images/growth3.jpg" alt="성장기 3" onclick="openModal('./images/growth3.jpg')">
+                        <img src="./images/growth4.jpg" alt="성장기 4" onclick="openModal('./images/growth4.jpg')">
+                    </div>
                 </div>
                 
-                <div class="album-photo">
-                    <img src="./images/album5.jpg" alt="은호 사진 5">
-                    <p class="photo-caption">돌잔치 준비</p>
+                <div class="album-section">
+                    <h3 class="section-caption">제주도 한 달 살기</h3>
+                    <div class="album-row-eight">
+                        <img src="./images/jeju1.jpg" alt="제주 1" onclick="openModal('./images/jeju1.jpg')">
+                        <img src="./images/jeju2.jpg" alt="제주 2" onclick="openModal('./images/jeju2.jpg')">
+                        <img src="./images/jeju3.jpg" alt="제주 3" onclick="openModal('./images/jeju3.jpg')">
+                        <img src="./images/jeju4.jpg" alt="제주 4" onclick="openModal('./images/jeju4.jpg')">
+                        <img src="./images/jeju5.jpg" alt="제주 5" onclick="openModal('./images/jeju5.jpg')">
+                        <img src="./images/jeju6.jpg" alt="제주 6" onclick="openModal('./images/jeju6.jpg')">
+                        <img src="./images/jeju7.jpg" alt="제주 7" onclick="openModal('./images/jeju7.jpg')">
+                        <img src="./images/jeju8.jpg" alt="제주 8" onclick="openModal('./images/jeju8.jpg')">
+                    </div>
                 </div>
                 
-                <div class="album-photo">
-                    <img src="./images/album6.jpg" alt="은호 사진 6">
-                    <p class="photo-caption">현재 모습</p>
+                <div class="album-section">
+                    <h3 class="section-caption">최근</h3>
+                    <div class="album-row">
+                        <img src="./images/recetn1.jpg" alt="최근 1" onclick="openModal('./images/recetn1.jpg')">
+                        <img src="./images/recetn2.jpg" alt="최근 2" onclick="openModal('./images/recetn2.jpg')">
+                    </div>
                 </div>
+                
+                
             </div>
         </section>
 
@@ -181,11 +210,27 @@
         
     </div>
     
+    <!-- 사진 모달 -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="은호 사진">
+        </div>
+    </div>
+    
     <script>
     function copyAddress() {
         navigator.clipboard.writeText('서울 중구 동호로 287').then(function() {
             alert('주소가 복사되었습니다!');
         });
+    }
+    
+    function openModal(imageSrc) {
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('photoModal').style.display = 'flex';
+    }
+    
+    function closeModal() {
+        document.getElementById('photoModal').style.display = 'none';
     }
     </script>
 </body>
